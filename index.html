@@ -521,7 +521,7 @@
           <button id="spanishBtn" type="button">ES</button>
         </div>
 
-        <a class="btn btn-primary" href="https://calendly.com/alleghenymmb/daycare-tour" target="_blank" onclick="trackTourClickSafe()">
+        <a class="btn btn-primary" href="https://calendly.com/alleghenymmb/daycare-tour" onclick="return gtag_report_conversion('https://calendly.com/alleghenymmb/daycare-tour');">
           <span data-lang="en">Schedule a Tour</span>
           <span data-lang="es">Agendar Visita</span>
         </a>
@@ -559,7 +559,7 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://calendly.com/alleghenymmb/daycare-tour" target="_blank" onclick="trackTourClickSafe()">
+          <a class="btn btn-primary" href="https://calendly.com/alleghenymmb/daycare-tour" onclick="return gtag_report_conversion('https://calendly.com/alleghenymmb/daycare-tour');">
             <span data-lang="en">Schedule a Tour</span>
             <span data-lang="es">Agendar Visita</span>
           </a>
@@ -662,7 +662,7 @@
           Con 30 años de experiencia enseñando, nuestra dueña trae el corazón de una educadora a cada parte del día.
           Su enfoque es cálido, atento e intencional: los niños no solo reciben cuidado, también son guiados, animados y celebrados.
         </p>
-        <a class="btn btn-primary" href="https://calendly.com/alleghenymmb/daycare-tour" target="_blank" onclick="trackTourClickSafe()">
+        <a class="btn btn-primary" href="https://calendly.com/alleghenymmb/daycare-tour" onclick="return gtag_report_conversion('https://calendly.com/alleghenymmb/daycare-tour');">
           <span data-lang="en">Schedule a Tour</span>
           <span data-lang="es">Agendar Visita</span>
         </a>
@@ -680,7 +680,7 @@
       </div>
 
       <div style="text-align:center; margin-bottom: 24px;">
-        <a class="btn btn-primary" href="https://calendly.com/alleghenymmb/daycare-tour" target="_blank" onclick="trackTourClickSafe()">
+        <a class="btn btn-primary" href="https://calendly.com/alleghenymmb/daycare-tour" onclick="return gtag_report_conversion('https://calendly.com/alleghenymmb/daycare-tour');">
           <span data-lang="en">Book Your Tour Now</span>
           <span data-lang="es">Reservar Visita</span>
         </a>
@@ -754,7 +754,7 @@
       </p>
 
       <div class="cta-actions">
-        <a class="btn btn-soft" href="https://calendly.com/alleghenymmb/daycare-tour" target="_blank" onclick="trackTourClickSafe()">
+        <a class="btn btn-soft" href="https://calendly.com/alleghenymmb/daycare-tour" onclick="return gtag_report_conversion('https://calendly.com/alleghenymmb/daycare-tour');">
           <span data-lang="en">Schedule Your Visit</span>
           <span data-lang="es">Agendar Visita</span>
         </a>
@@ -818,5 +818,20 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
+  <!-- Google Ads conversion helper -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18131642453/-cKPCIj2uKYcENXQ68VD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </body>
 </html>
