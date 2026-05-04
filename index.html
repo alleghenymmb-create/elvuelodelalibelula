@@ -760,36 +760,17 @@
       spanishBtn.classList.remove('active');
       document.documentElement.lang = 'en';
     });
-
     spanishBtn.addEventListener('click', () => {
       body.classList.add('spanish');
       spanishBtn.classList.add('active');
       englishBtn.classList.remove('active');
       document.documentElement.lang = 'es';
     });
-
-    function trackCallClickSafe() {
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-CONVERSION_ID/CALL_CONVERSION_LABEL'
-        });
-      }
-    }
-
-    function trackTourClickSafe() {
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-CONVERSION_ID/TOUR_CONVERSION_LABEL'
-        });
-      }
-    }
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.14 });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
   <!-- Google Ads conversion helper -->
